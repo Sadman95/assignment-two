@@ -28,11 +28,13 @@ img{
     --btn-bg: #E02C6D;
     --btn-pd: 10px 28px;
 }
+
 /* header css */
 header{
     background-color: #2D25A0;
     padding: 20px 0 40px 0;
 }
+/* -----nav section---- */
 .nav-bar{
     display: grid;
     grid-template-columns: 80% 20%;
@@ -43,14 +45,71 @@ header{
 .nav-item{
     margin-right: 32px;
 }
-.nav-link,.btn-login{
+.nav-link,.btn-basic{
     color: #fff;
     font-weight: 500;
 }
 .fa-sign-in-alt{
     margin-right: 10px;
 }
-.btn-login{
+.btn-basic{
     background-color: var(--btn-bg);
     padding: var(--btn-pd);
+}
+
+/* -----banner section----- */
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-title{
+    font-size: 64px;
+    font-weight: 700;
+    color: #fff;
+}
+.fa-arrow-right{
+    margin-left: 16px;
+    animation: arrow 2s linear infinite alternate;
+}
+@keyframes arrow {
+    0%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
+}
+.player-kick{
+    height: 438px;
+    width: 556px;
+    padding: 48px 110px 0 0;
+}
+.ball img {
+    height: 75px;
+    width: 75px;
+}
+.banner-image{
+    position: relative;
+}
+.ball {
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+.banner-image:hover .ball{
+    animation: kick 3s linear infinite alternate;
+}
+@keyframes kick {
+    from{
+        top: 70px;
+        left: 0;
+    }
+    to{
+        top: 160px;
+        left: 20px;
+    }
 }
