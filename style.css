@@ -1,159 +1,195 @@
 /* global css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     outline: 0;
 }
-html, body {
+
+html,
+body {
     max-width: 100vw;
     overflow-x: hidden;
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
 }
-ul{
+
+ul {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-img{
+
+img {
     vertical-align: middle;
 }
-.container{
+
+.container {
     width: 85%;
     margin: auto;
 }
+
 /* root css */
-:root{
+:root {
     --btn-bg: #E02C6D;
     --btn-pd: 10px 28px;
 }
 
 /* header css */
-header{
+header {
     background-color: #2D25A0;
     padding: 20px 0 40px 0;
 }
+
 /* -----nav section---- */
-.nav-bar{
+.nav-bar {
     display: grid;
     grid-template-columns: 80% 20%;
 }
-.dropdown-toggle{
+
+.nav-toggle {
     display: none;
 }
-.menu{
+
+.menu {
     display: flex;
 }
-.nav-item{
+
+.nav-item {
     margin-right: 32px;
 }
-.nav-link,.btn-basic{
+
+.nav-link,
+.btn-basic {
     color: #fff;
     font-weight: 500;
 }
-.fa-sign-in-alt{
+
+.fa-sign-in-alt {
     margin-right: 10px;
 }
-.btn-basic{
+
+.btn-basic {
     background-color: var(--btn-bg);
     padding: var(--btn-pd);
 }
 
 /* -----banner section----- */
-.banner{
+.banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.banner-title{
+
+.banner-title {
     font-size: 64px;
     font-weight: 700;
     color: #fff;
 }
-.fa-arrow-right{
+
+.fa-arrow-right {
     margin-left: 16px;
     animation: arrow 2s linear infinite alternate;
 }
+
 @keyframes arrow {
-    0%{
+    0% {
         transform: translateX(5px);
     }
-    50%{
+
+    50% {
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         transform: translateX(-5px);
     }
 }
-.player-kick{
+
+.player-kick {
     height: 438px;
     width: 556px;
     padding: 48px 110px 0 0;
 }
+
 .ball img {
     height: 75px;
     width: 75px;
 }
-.banner-image{
+
+.banner-image {
     position: relative;
 }
+
 .ball {
     position: absolute;
     top: 70px;
     left: 0;
 }
-.banner-image:hover .ball{
+
+.banner-image:hover .ball {
     animation: kick 3s linear infinite alternate;
 }
+
 @keyframes kick {
-    from{
+    from {
         top: 70px;
         left: 0;
     }
-    to{
+
+    to {
         top: 160px;
         left: 20px;
     }
 }
 
 /* players section */
-#players{
+#players {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     padding: 60px 0;
 }
-.player{
+
+.player {
     background-color: #fff;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
     padding: 15px;
 }
-.player img{
+
+.player img {
     width: 100%;
 }
-.player-name{
+
+.player-name {
     font-size: 28px;
     font-weight: 700;
     margin: 22px 0;
 }
-.player-details,.fa-star{
+
+.player-details,
+.fa-star {
     color: #6C6C6C;
     text-align: justify;
 }
-.fill-star{
+
+.fill-star {
     color: #E02C6D;
 }
-.player-rating{
+
+.player-rating {
     margin-top: 8px;
 }
 
 /* contact css */
-#contact{
+#contact {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
     background: url(images/contact-bg.png) no-repeat;
     background-size: cover;
@@ -163,55 +199,63 @@ header{
 
 }
 
-.contact-form{
+.contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
-input{
+
+input {
     border: 1px dashed lavenderblush;
     padding: 8px;
     border-radius: 5px;
     margin-bottom: 32px;
     box-shadow: 0 0 0 8px #0000003d;
 }
-input:focus{
+
+input:focus {
     border: 1px solid #E02C6D;
 }
-input[type='text']{
+
+input[type='text'] {
     width: 80%;
 }
+
 .btn-form {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-self: center;
 }
-.login{
+
+.login {
     width: 35%;
 }
-.sign-up{
+
+.sign-up {
     width: 52%;
 }
 
 /* sponsors css */
-#sponsors{
+#sponsors {
     background-color: #03230c12;
     margin: 100px 0;
 
 }
-.partners{
+
+.partners {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
 }
-.partners img{
+
+.partners img {
     width: 100%;
 }
 
 /* footer css */
-footer{
+footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 12px;
@@ -219,106 +263,185 @@ footer{
     margin-top: 160px;
     margin-bottom: 40px;
 }
-.footer-logo img{
+
+.footer-logo img {
     height: 110px;
     width: 480px;
 }
-.social-icons{
+
+.social-icons {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.social-icons li{
+
+.social-icons li {
     background-color: #E7E7E8;
     padding: 8px 12px;
     border-radius: 50%;
     margin: 0 8px;
 }
-.fab,.fa-basketball-ball{
+
+.fab,
+.fa-basketball-ball {
     color: #969BAB;
     font-size: 16px;
 }
 
-/* ---- responsive css ----- */
+
+
+/* ----- responsive css ----- */
 /* for mobile device */
-@media only screen and (max-width: 688px) { 
+@media only screen and (max-width: 688px) {
     :root {
         --btn-pd: 10px 16px;
     }
+
+    .nav-toggle {
+        display: block;
+        color: #fff;
+    }
+
+    .fa-bars {
+        font-size: 24px;
+    }
+
+    .check-box {
+        box-shadow: none;
+        display: none;
+    }
+
+    .toggle-menu {
+        background-color: navy;
+        padding: 20px;
+        width: 20%;
+        border-radius: 5px;
+        display: none;
+    }
+
+    .toggle-item {
+        margin-bottom: 8px;
+    }
+
+    .check-box:checked~.toggle-menu {
+        display: block;
+    }
+
+    .pd {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .menu {
+        display: none;
+    }
+
     .banner {
         flex-direction: column;
         padding-top: 110px;
     }
-    .player-kick{
+
+    .player-kick {
         padding: 48px 0 0 0;
     }
-    .banner-image{
+
+    .ball img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .banner-image {
         padding: 80px 0;
     }
 
-    #players,.partners,#contact{
-        grid-template-columns: repeat(1,1fr);
+    #players,
+    .partners,
+    #contact {
+        grid-template-columns: repeat(1, 1fr) !important;
     }
 
-    .login{
+    .player-name {
+        font-size: 18px;
+    }
+
+    .login {
         width: 50%;
     }
-    .sign-up{
+
+    .sign-up {
         width: 62%;
     }
 }
 
 /* for tablet or landscape mobile */
 @media only screen and (max-width: 992px) {
-    :root{
+    :root {
         --btn-pd: 10px 20px;
     }
+
     .player-kick {
         height: 410px;
         width: 510px;
         padding: 48px 0px 0 40px;
     }
-    .banner{
+
+    .banner {
         flex-direction: column;
     }
-    #players,.partners,#contact{
-        grid-template-columns: repeat(2,1fr);
+
+    #players,
+    .partners,
+    #contact {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .login,
+    .sign-up {
+        width: 62%;
+        margin: 8px;
     }
 }
 
 /* for laptop device */
 @media only screen and (min-width: 993px) and (max-width: 1312px) {
-    :root{
+    :root {
         --btn-pd: 10px 25px;
     }
-    #players{
-        grid-template-columns: repeat(3,1fr);
+
+    #players {
+        grid-template-columns: repeat(3, 1fr);
     }
-    .partners{
-        grid-template-columns: repeat(2,1fr);
+
+    .partners {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .player-name{
+
+    .player-name {
         font-size: 21px;
     }
 }
 
 /* for desktop & tv */
-@media only screen and (min-width: 1313px ) {
+@media only screen and (min-width: 1313px) {
 
-    #players,.partners{
-        grid-template-columns: repeat(4,1fr);
+    #players,
+    .partners {
+        grid-template-columns: repeat(4, 1fr);
     }
+
     .player-name {
         font-size: 21px;
     }
-    .player{
+
+    .player {
         padding: 10px;
     }
-    footer{
-        grid-template-columns: repeat(3,1fr);
+
+    footer {
+        grid-template-columns: repeat(3, 1fr);
     }
-    .copyright{
+
+    .copyright {
         margin-top: 40px;
     }
 }
-
