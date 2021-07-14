@@ -167,7 +167,7 @@ input{
     border: 1px dashed lavenderblush;
     padding: 8px;
     border-radius: 5px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 }
 input[type='text']{
     width: 80%;
@@ -183,4 +183,19 @@ input[type='text']{
 }
 .sign-up{
     width: 52%;
+}
+
+/* sponsors css */
+#sponsors{
+    background-color: #03230c12;
+    margin: 100px 0;
+
+}
+.partners{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+}
+.partners img{
+    width: 100%;
 }
