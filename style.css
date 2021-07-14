@@ -5,8 +5,11 @@
     margin: 0;
     outline: 0;
 }
-body{
+html, body {
+    max-width: 100vw;
     overflow-x: hidden;
+}
+body{
     font-family: 'Poppins', sans-serif;
 }
 ul{
@@ -22,7 +25,6 @@ img{
     width: 85%;
     margin: auto;
 }
-
 /* root css */
 :root{
     --btn-bg: #E02C6D;
@@ -38,6 +40,9 @@ header{
 .nav-bar{
     display: grid;
     grid-template-columns: 80% 20%;
+}
+.dropdown-toggle{
+    display: none;
 }
 .menu{
     display: flex;
@@ -150,13 +155,14 @@ header{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 30px;
-    background: url(images/contact-bg.png) left top no-repeat;
+    background: url(images/contact-bg.png) no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    border-radius: 20px;
     padding: 28px;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+
 }
+
 .contact-form{
     display: flex;
     flex-direction: column;
@@ -168,6 +174,10 @@ input{
     padding: 8px;
     border-radius: 5px;
     margin-bottom: 32px;
+    box-shadow: 0 0 0 8px #0000003d;
+}
+input:focus{
+    border: 1px solid #E02C6D;
 }
 input[type='text']{
     width: 80%;
@@ -228,3 +238,87 @@ footer{
     color: #969BAB;
     font-size: 16px;
 }
+
+/* ---- responsive css ----- */
+/* for mobile device */
+@media only screen and (max-width: 688px) { 
+    :root {
+        --btn-pd: 10px 16px;
+    }
+    .banner {
+        flex-direction: column;
+        padding-top: 110px;
+    }
+    .player-kick{
+        padding: 48px 0 0 0;
+    }
+    .banner-image{
+        padding: 80px 0;
+    }
+
+    #players,.partners,#contact{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .login{
+        width: 50%;
+    }
+    .sign-up{
+        width: 62%;
+    }
+}
+
+/* for tablet or landscape mobile */
+@media only screen and (max-width: 992px) {
+    :root{
+        --btn-pd: 10px 20px;
+    }
+    .player-kick {
+        height: 410px;
+        width: 510px;
+        padding: 48px 0px 0 40px;
+    }
+    .banner{
+        flex-direction: column;
+    }
+    #players,.partners,#contact{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* for laptop device */
+@media only screen and (min-width: 993px) and (max-width: 1312px) {
+    :root{
+        --btn-pd: 10px 25px;
+    }
+    #players{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .partners{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .player-name{
+        font-size: 21px;
+    }
+}
+
+/* for desktop & tv */
+@media only screen and (min-width: 1313px ) {
+
+    #players,.partners{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .player-name {
+        font-size: 21px;
+    }
+    .player{
+        padding: 10px;
+    }
+    footer{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .copyright{
+        margin-top: 40px;
+    }
+}
+
