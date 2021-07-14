@@ -288,7 +288,14 @@ footer {
     color: #969BAB;
     font-size: 16px;
 }
-
+.far{
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    color: #2D25A0;
+    font-size: 26px;
+    z-index: 999;
+}
 
 
 /* ----- responsive css ----- */
