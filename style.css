@@ -113,3 +113,74 @@ header{
         left: 20px;
     }
 }
+
+/* players section */
+#players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    padding: 60px 0;
+}
+.player{
+    background-color: #fff;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
+.player img{
+    width: 100%;
+}
+.player-name{
+    font-size: 28px;
+    font-weight: 700;
+    margin: 22px 0;
+}
+.player-details,.fa-star{
+    color: #6C6C6C;
+    text-align: justify;
+}
+.fill-star{
+    color: #E02C6D;
+}
+.player-rating{
+    margin-top: 8px;
+}
+
+/* contact css */
+#contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+    background: url(images/contact-bg.png) left top no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+input{
+    border: 1px dashed lavenderblush;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+input[type='text']{
+    width: 80%;
+}
+.btn-form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-self: center;
+}
+.login{
+    width: 35%;
+}
+.sign-up{
+    width: 52%;
+}
